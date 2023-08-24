@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson:wght@400;700&family=Lora&display=swap');
+
+@keyframes estrelaPulsar {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes pontoPulsar {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+* {
+    transition-property: all;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #C6C6C6;
+}
+
+.serifFont {
+    font-family: 'Judson', serif;
+}
+
+.loraFont {
+    font-family: 'Lora', serif;
+}
+
+::-webkit-scrollbar {
+    background-color: #000000;
+    width: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ce9e00;
+    border-radius: 1vw;
+}
+
+
+/*Hero Row*/
+
+#heroRow {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw 0;
+    overflow-y: hidden;
+}
+
+.tarotTitle{
+    font-size: 15vw;
+    font-weight: bold;
+    z-index: 555;
+}
+
+.estrela {
+    font-size: 1.5vw;
+    filter: drop-shadow(0.2vw 0.2vw 0.5vw #5026e6);
+    animation-name: estrelaPulsar;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.estrela:hover, .ponto:hover {
+    transform: scale(3);
+}
+
+.ponto {
+    font-size: 6vw;
+    filter: drop-shadow(0.1vw 0.1vw 0.5vw #491de6);
+    animation-name: pontoPulsar;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.estrela, .ponto {
+    color: #ffffff;
+    z-index: 111;
+    position: absolute;
+}
+
+.estrela.um {
+    left: 25%; 
+    top: 10%;
+    rotate: 25deg;
+}
+
+.estrela.dois {
+    left: 7%; 
+    top: 25%;
+    rotate: 37deg;
+}
+
+.estrela.tres {
+    left: 47%; 
+    top: 15%;
+    rotate: 42deg;
+}
+
+.estrela.quatro {
+    left: 82%; 
+    bottom: 7%;
+    rotate: 50deg;
+}
+
+.estrela.cinco {
+    left: 73%; 
+    bottom: 35%;
+    rotate: 63deg;
+}
+
+.estrela.seis {
+    left: 19%; 
+    top: 38%;
+    rotate: 77deg;
+}
+
+.estrela.sete {
+    left: 59%; 
+    top: 72%;
+    rotate: 87deg;
+}
+
+.estrela.oito {
+    left: 12%; 
+    top: 70%;
+    rotate: 92deg;
+}
+
+.estrela.nove {
+    left: 24%; 
+    top: 76%;
+    rotate: 111deg;
+}
+
+.estrela.dez {
+    left: 95%; 
+    top: 5%;
+    rotate: 135deg;
+}
+
+.ponto.um {
+    left: 7%; 
+    top: 3%;
+}
+
+.ponto.dois {
+    left: 72%; 
+    top: 32%;
+}
+
+.ponto.tres {
+    left: 60%; 
+    top: 15%;
+}
+
+.ponto.quatro {
+    left: 87%; 
+    top: 1%;
+}
+
+.ponto.cinco {
+    left: 34%; 
+    top: 8%;
+}
+
+.ponto.seis {
+    left: 25%; 
+    top: 60%;
+}
+
+.ponto.sete {
+    left: 59%; 
+    top: 57%;
+}
+
+.ponto.oito {
+    left: 89%; 
+    top: 45%;
+}
+
+.ponto.nove {
+    left: 50%; 
+    top: 90%;
+}
+
+.ponto.dez {
+    left: 70%; 
+    top: 12%;
+}
+
+/*Origem Row*/
+
+#origemRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: fit-content;
+    padding: 7vw 3vw;
+    padding-left: 0;
+}
+
+#magoImagem, #cartaResultante {
+    width: 30vw;
+    height: 35vw;
+    border-radius: 1vw;
+    border: 0.5vw solid #C6C6C6;
+    box-shadow: 0.5vw 0.5vw 1vw #ce9e00;
+}
+
+#origemTitulo, #consulteTitulo, #cartaNome {
+    font-size: 7.5vw;
+    margin: 0;
+    text-align: center;
+}
+
+#origemTexto, #cartaDescricao {
+    font-size: 2vw;
+    text-align: justify;
+    line-height: 3vw;
+}
+
+/*Consulte Row*/
+
+#cartaRow {
+    padding: 7vw 3vw;
+    padding-right: 0;
+    height: fit-content;
+}
+
+hr {
+    width: 75vw;
+    margin: 2vw auto;
+}
+
+#leituraFlex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#meuBotao {
+    background-color: #000000;
+    border: 0.1vw solid #C6C6C6;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    color: #C6C6C6;
+    text-transform: uppercase;
+    font-size: 3vw;
+    display: flex;
+    box-shadow: 0vw 0.7vw 1vw #ce9e00;
+    cursor: pointer;
+}
+
+#meuBotao:hover {
+    background-color: #0d003d;
+}
+
+#meuBotao:active {
+    background-color: #397e00;
+    transform: scale(1.02);
+}
+
+#botaoFlex {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw;
+}
+
+/*Footer Row*/
+
+footer {
+    background-color: #0C0C0C;
+    height: fit-content;
+}
+
+#footerFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarotTitle.footer{
+    font-size: 7vw;
+    padding: 1vw 0;
+    margin: 0;
+}
+
+#redesSociais {
+    font-size: 3.5vw;
+    padding: 1vw 0;
+}
+
+.fa-brands {
+    padding: 0 3vw;
+    cursor: pointer;
+}
+
+#copyText {
+    font-size: 1.5vw;
+}
+
+@media (max-width: 550px) {
+
+    /*Hero Row*/
+
+    .tarotTitle{
+        font-size: 20vw;
+        font-weight: bold;
+        z-index: 555;
+    }
+
+    /*Origem Row*/
+
+    #origemRow {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+        height: fit-content;
+        padding: 5vw;
+    }
+
+    #origemTitulo, #consulteTitulo, #cartaNome {
+        font-size: 12vw;
+    }
+    
+    #origemTexto, #cartaDescricao {
+        font-size: 4vw;
+        line-height: 7vw;
+    }
+
+    #cartaResultante {
+        width: 60vw;
+        height: 70vw;
+        border-radius: 1vw;
+        border: 0.5vw solid #C6C6C6;
+        box-shadow: 0.5vw 0.5vw 1vw #ce9e00;
+    }
+
+    #magoImagem {
+        display: none;
+    } 
+
+    /*Consulta Row*/
+
+    #leituraFlex {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5vw;
+    }
+
+    #meuBotao {
+        font-size: 5vw;
+    }
+
+    /*Footer*/
+
+    .tarotTitle.footer{
+        font-size: 12vw;
+
+    }
+    
+    #redesSociais {
+        font-size: 7vw;
+        padding: 1vw;
+    }
+
+    #copyText {
+        font-size: 3vw;
+    }
+}

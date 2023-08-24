@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d0fd81da1b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="folhasDeEstilo\stylesheet.css">
+    <title>Tarot | Veja seu futuro</title>
+</head>
+<body>
+
+    <main>
+
+        <section id="heroRow">
+
+            <h1 class="serifFont tarotTitle">TAROT</h1>
+
+            <div class="estrela um"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela dois"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela tres"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela quatro"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela cinco"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela seis"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela sete"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela oito"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela nove"><i class="fa-solid fa-star"></i></div>
+            <div class="estrela dez"><i class="fa-solid fa-star"></i></div>
+
+            <div class="ponto um">.</div>
+            <div class="ponto dois">.</div>
+            <div class="ponto tres">.</div>
+            <div class="ponto quatro">.</div>
+            <div class="ponto cinco">.</div>
+            <div class="ponto seis">.</div>
+            <div class="ponto sete">.</div>
+            <div class="ponto oito">.</div>
+            <div class="ponto nove">.</div>
+            <div class="ponto dez">.</div>
+
+        </section>
+
+        <section id="origemRow">
+
+            <figure>
+                <img src="imagens\mago.jpg" alt="carta de tarot no estilo expressionismo de uma homem de cartola" title="O mago" id="magoImagem">
+            </figure>
+            <article>
+                <h2 id="origemTitulo" class="serifFont">ORIGEM</h2>
+                <p id="origemTexto" class="loraFont">O tarot é uma arte milenar que busca revelar os mistérios da vida e do destino. 
+                    Acredita-se que ele tenha surgido na Europa medieval, baseado em jogos de cartas trazidos do Oriente. 
+                    O tarot é formado por 22 arcanos maiores, que representam as principais etapas da jornada humana, desde o Louco, que simboliza o potencial e
+                    a inocência, até o Mundo, que indica a realização e a plenitude. Cada arcano maior tem um significado profundo e uma correlação com
+                    a astrologia, a numerologia, a cabala e a alquimia. O tarot é utilizado de diversas maneiras, conforme a tradição e o gosto de cada um.</p>
+            </article>
+
+        </section>
+
+        <section id="cartaRow">
+
+            <h2 id="consulteTitulo">CONSULTE</h2>
+            <hr>
+            <div id="leituraFlex">
+
+                <figure>
+                    <img src="imagens\morte.jpg" alt="a carta de tarot a morte" id="cartaResultante">
+                </figure>
+
+                <article>
+                    <h2 id="cartaNome">A morte</h2>
+                    <p id="cartaDescricao" class="loraFont">Você tirou a carta “A morte” no tarot, mas não se assuste. Essa carta não significa que você vai morrer ou 
+                        que alguém próximo a você vai falecer. Ela representa uma grande transformação em sua vida, um fim de um ciclo e um começo de outro. 
+                        Você está prestes a se libertar de algo que não te serve mais, que te prende ao passado ou que te impede de evoluir. Pode ser um 
+                        relacionamento, um emprego, um hábito ou uma crença.</p>
+                </article>
+            </div>
+            <div id="botaoFlex">
+                <button class="serifFont" id="meuBotao" onclick="cartaResultado()">Veja Seu Destino</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div id="footerFlex">
+            <h1 class="tarotTitle footer">TAROT</h1>
+            <div id="redesSociais">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+            <p id="copyText" class="loraFont">Todos os direitos reservados © 2023</p>
+        </div>
+
+    </footer>
+
+    <script>
+
+        const imagem = [
+            'imagens\\carruagem.jpg', 'imagens\\diabo.jpg', 'imagens\\enamorados.jpg',
+            'imagens\\enforcado.jpg', 'imagens\\eremita.jpg', 'imagens\\estrela.jpg',
+            'imagens\\força.jpg', 'imagens\\imperador.jpg', 'imagens\\imperatriz.jpg',
+            'imagens\\julgamento.jpg', 'imagens\\justiça.jpg', 'imagens\\louco.jpg',
+            'imagens\\lua.jpg', 'imagens\\mago.jpg', 'imagens\\morte.jpg', 
+            'imagens\\mundo.jpg', 'imagens\\papa.jpg', 'imagens\\roda.jpg',
+            'imagens\\sacerdotisa.jpg', 'imagens\\sol.jpg', 'imagens\\temperança.jpg',
+            'imagens\\torre.jpg'
+        ]
+
+        const significado = [
+            'A carta da Carruagem representa controle, disciplina e direção. Você está no caminho certo e está confiante em suas habilidades. Você está pronto para enfrentar qualquer desafio que vier em seu caminho. Você está no controle de sua vida e está ciente de suas forças e fraquezas. Você é capaz de se concentrar em seus objetivos e não se desviar do caminho. Você é um líder natural e inspira os outros a segui-lo.',
+            'A carta do Diabo é um alerta para perigos e ilusões. Você está preso a vícios, obsessões ou tentações. Você deve buscar o equilíbrio e a libertação. No amor, você está em uma relação tóxica. Respeite-se e não se deixe enganar.',
+            'A carta dos Enamorados representa o amor, a paixão e a escolha. Você está em uma encruzilhada e precisa escolher entre dois caminhos. Você deve seguir seu coração e escolher o caminho que te faz mais feliz. Você precisa ser honesto consigo mesmo sobre o que você quer e precisa em um relacionamento. Você precisa estar disposto a correr riscos e tomar decisões difíceis.',
+            'A carta do Enforcado representa a suspensão, a espera e a introspecção. Você está em uma situação de impasse e precisa tomar uma decisão importante. Você deve refletir sobre suas opções e escolher o caminho que é melhor para você. Você precisa estar disposto a esperar pacientemente pelo resultado e confiar em sua intuição. Você precisa estar disposto a desistir de seu controle e deixar as coisas acontecerem naturalmente.',
+            'A carta do Eremita representa a sabedoria, a introspecção e a busca da verdade. Você está em um momento de introspecção e precisa buscar a verdade dentro de si. Você deve ouvir sua intuição e seguir seu coração. Você precisa estar disposto a se isolar do mundo e passar algum tempo sozinho. Você precisa estar disposto a enfrentar suas sombras e aprender com seus erros.',
+            'A carta A Estrela representa esperança, renovação e otimismo. Você está passando por um momento difícil, mas a esperança está no horizonte. Você deve manter a fé e acreditar que tudo vai dar certo. Você precisa estar disposto a ver o lado bom das coisas e se concentrar no futuro. Você precisa estar disposto a pedir ajuda aos outros e aceitar o apoio deles.',
+            'A carta Força representa a coragem, a determinação e a superação de obstáculos. Você está enfrentando um desafio, mas você tem a força necessária para superá-lo. Você deve acreditar em si mesmo e nunca desistir de seus sonhos. Você precisa estar disposto a enfrentar seus medos e correr riscos. Você precisa estar disposto a trabalhar duro e nunca desistir.',
+            'O Imperador representa autoridade, ordem e estrutura. Você está em um momento de estabilidade e segurança. Você tem tudo o que precisa para alcançar seus objetivos. Você precisa estar disposto a assumir o controle de sua vida e fazer as coisas acontecerem. Você precisa estar disposto a tomar decisões difíceis e liderar os outros.',
+            'A Imperatriz representa criatividade, fertilidade e poder feminino. Você está em um momento de crescimento e abundância. Você está conectado com sua energia criativa e capaz de realizar grandes coisas. Você precisa estar disposto a ser você mesmo e abraçar sua feminilidade. Você precisa estar disposto a se expressar criativamente e compartilhar seus talentos com o mundo.',
+            'A carta do Julgamento representa renascimento, renovação e segunda chance. Você está em um momento de transformação e crescimento. Você está pronto para deixar o passado para trás e começar um novo capítulo em sua vida. Você precisa estar disposto a perdoar a si mesmo e aos outros. Você precisa estar disposto a aprender com seus erros e seguir em frente. Você precisa estar disposto a abraçar uma nova vida e todas as possibilidades que ela oferece.',
+            'A carta da Justiça representa equilíbrio, equidade e justiça. Você está em um momento de clareza e compreensão. Você está pronto para fazer o que é certo. Você precisa estar disposto a ser imparcial e justo. Você precisa estar disposto a defender o que é certo, mesmo quando é difícil. Você precisa estar disposto a fazer justiça a todos, independentemente de sua posição social.',
+            'O Louco representa liberdade, aventura e intuição. Você está em um momento de mudança e transformação. Você está pronto para deixar o passado para trás e começar uma nova jornada. Você precisa estar disposto a sair da sua zona de conforto e experimentar coisas novas. Você precisa estar disposto a seguir sua intuição e confiar em seu coração. Você precisa estar disposto a abraçar o desconhecido e todas as possibilidades que ele oferece.',
+            'A Lua representa intuição, sonhos e emoções. Você está em um momento de introspecção e autoconhecimento. Você está pronto para explorar seu subconsciente. Você precisa estar disposto a ouvir sua intuição e seguir seu coração. Você precisa estar disposto a enfrentar seus medos e explorar seus sonhos. Você precisa estar disposto a abraçar o desconhecido e todas as possibilidades que ele oferece',
+            'O Mago representa criatividade, poder e potencial. Você está em um momento de novos começos e possibilidades. Você está pronto para manifestar seus desejos. Você precisa estar disposto a usar sua imaginação e criatividade para alcançar seus objetivos. Você precisa estar disposto a tomar riscos e ir atrás do que você quer.',
+            'A carta da Morte representa mudança, transformação e renascimento. Você está em um momento de grandes mudanças em sua vida. Você está pronto para deixar o passado para trás e começar um novo capítulo em sua vida. Você precisa estar disposto a deixar ir o que não lhe serve mais. Você precisa estar disposto a abraçar o novo e desconhecido.',
+            'A carta do Mundo representa totalidade, conclusão e realização. Você está em um momento de grande sucesso e realização. Você está pronto para colher os frutos do seu trabalho. Você precisa estar disposto a celebrar suas conquistas. Você precisa estar disposto a olhar para o futuro com esperança e otimismo.',
+            'O Papa representa sabedoria, tradição e espiritualidade. Você está em um momento de grande crescimento e desenvolvimento espiritual. Você está pronto para aprender mais sobre si mesmo e sobre o mundo ao seu redor. Você precisa estar disposto a buscar orientação e sabedoria dos mais experientes. Você precisa estar disposto a seguir sua intuição e seu coração.',
+            'A Roda da Fortuna representa mudança, sorte e oportunidades. Você está em um momento de grande mudança em sua vida. Você está pronto para abraçar novas oportunidades e desafios. Você precisa estar disposto a deixar o passado para trás e seguir em frente. Você precisa estar disposto a aceitar o que a vida lhe traz.',
+            'A Sacerdotisa representa intuição, sabedoria e mistério. Você está em um momento de introspecção e autoconhecimento. Você está pronto para explorar sua psique e seus dons intuitivos. Você precisa estar disposto a ouvir sua intuição e seguir seu coração. Você precisa estar disposto a enfrentar seus medos e explorar seus sonhos.',
+            'O Sol representa alegria, otimismo e felicidade. Você está em um momento de grande alegria e realização. Você está pronto para aproveitar a vida e tudo o que ela tem a oferecer. Você precisa estar disposto a ser positivo e otimista. Você precisa estar disposto a compartilhar sua alegria com os outros.',
+            'A carta da Temperança representa equilíbrio, harmonia e moderação. Você está em um momento de grande paz e serenidade. Você está pronto para encontrar o equilíbrio em sua vida. Você precisa estar disposto a encontrar um meio-termo entre os extremos. Você precisa estar disposto a ser paciente e tolerante.',
+            'A Torre representa mudanças repentinas, destruição e renascimento. Você está prestes a experimentar mudanças significativas em sua vida. Essas mudanças podem ser difíceis, mas também podem ser positivas. Você precisa estar disposto a deixar ir o que não lhe serve mais. Você precisa estar disposto a abraçar o novo e desconhecido.'
+        ]
+
+        const titulo = [
+            'A carruagem', 'O diabo', 'Os enamorados',
+            'O enforcado', 'O eremita', 'A estrela',
+            'A força', 'O imperador', 'A imperatriz',
+            'O julgamento', 'A justiça', 'O louco',
+            'A lua', 'O mago', 'A morte',
+            'O mundo', 'O papa', 'A roda da fortuna',
+            'A sacerdotisa', 'O sol', 'A temperança',
+            'A torre'
+        ]
+
+        let tamanhoArray = significado.length;
+        
+
+        function cartaResultado() {
+            let i = Math.floor(Math.random() * tamanhoArray);
+
+            document.getElementById('cartaResultante').src = imagem[i];
+            document.getElementById('cartaNome').innerHTML = titulo[i];
+            document.getElementById('cartaDescricao').innerHTML = significado[i];
+        }
+    </script>
+
+</body>
+</html>
