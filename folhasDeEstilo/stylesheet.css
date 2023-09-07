@@ -32,6 +32,7 @@
     transition-property: all;
     transition-duration: 250ms;
     transition-timing-function: ease-in-out;
+    scroll-behavior: smooth;
 }
 
 
@@ -60,18 +61,6 @@ body {
     border-radius: 1vw;
 }
 
-
-/*Hero Row*/
-
-#heroRow {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vw 0;
-    overflow-y: hidden;
-}
-
 .tarotTitle{
     font-size: 15vw;
     font-weight: bold;
@@ -85,10 +74,6 @@ body {
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-}
-
-.estrela:hover, .ponto:hover {
-    transform: scale(3);
 }
 
 .ponto {
@@ -216,6 +201,45 @@ body {
     top: 12%;
 }
 
+/*Hero Row*/
+
+#heroRow {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw 0;
+    overflow-y: hidden;
+}
+
+/*Menu*/
+
+#menuListaFlex {
+    width: 100%;
+    background-color: #0C0C0C;
+    font-size: 2.5vw;
+    position: sticky;
+    z-index: 6666;
+    top: 0vh;
+}
+
+#menuLista {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu-itens {
+    list-style: none;
+    padding: 1vw 0;
+}
+
+#menuListaFlex > ul > li > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 /*Origem Row*/
 
 #origemRow {
@@ -229,8 +253,8 @@ body {
 }
 
 #magoImagem, #cartaResultante {
-    width: 30vw;
-    height: 35vw;
+    width: 25vw;
+    height: 30vw;
     border-radius: 1vw;
     border: 0.5vw solid #C6C6C6;
     box-shadow: 0.5vw 0.5vw 1vw #ce9e00;
@@ -341,6 +365,12 @@ footer {
         z-index: 555;
     }
 
+    /*Menu*/
+
+    #menuListaFlex {
+        font-size: 5vw;
+    }
+
     /*Origem Row*/
 
     #origemRow {
@@ -362,8 +392,8 @@ footer {
     }
 
     #cartaResultante {
-        width: 60vw;
-        height: 70vw;
+        width: 55vw;
+        height: 65vw;
         border-radius: 1vw;
         border: 0.5vw solid #C6C6C6;
         box-shadow: 0.5vw 0.5vw 1vw #ce9e00;
